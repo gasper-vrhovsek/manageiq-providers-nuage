@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://NUAGE_NETWORK_HOST:8443/nuage/api/v5_0/policygroups
+    uri: https://NUAGE_NETWORK_HOST:8443/nuage/api/v5_0/subnets/4da803f7-c0d2-4beb-b02e-341ea77e377f
     body:
       encoding: US-ASCII
       string: ''
@@ -17,6 +17,10 @@ http_interactions:
       - csp
       Content-Type:
       - application/json; charset=UTF-8
+      X-Nuage-Filtertype:
+      - predicate
+      X-Nuage-Filter:
+      - name ISNOT 'BackHaulSubnet'
       Authorization:
       - Basic eGxhYjo4ZDE2MTdjZC02ZjhlLTQyN2QtYTBjNy0wODI5MzAzYmRkNWI=
   response:
@@ -37,14 +41,14 @@ http_interactions:
         GMT
       Access-Control-Allow-Origin:
       - "*"
-      X-Nuage-Orderby:
-      - name ASC
-      X-Nuage-Count:
-      - '2'
+      X-Nuage-Filtertype:
+      - predicate
       Access-Control-Expose-Headers:
       - X-Nuage-Organization, X-Nuage-ProxyUser, X-Nuage-OrderBy, X-Nuage-FilterType,
         X-Nuage-Filter, X-Nuage-Page, X-Nuage-PageSize, X-Nuage-Count, X-Nuage-Custom,
         X-Nuage-ClientType
+      X-Nuage-Filter:
+      - name ISNOT 'BackHaulSubnet'
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -58,17 +62,21 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAALWSW2vbQBCF/4rZZy/s/eK3tFZLaImNrSQPJZTV7mwr0A1Z
-        phUl/70ruUmd0ECg7cuC5szZnU9nPv1A/mtZhR4atGqOVbVEnUsfQz52gFYo
-        tLUrG7REqVQO4963czm7yrPddne5z5JUucNw3QU3QHgzJtE4FQkwgp0IBRZG
-        G+yCEdh6r6iWygcJT23rdKAVlUQzRoTkhJAl8j24oWybP4qNq6c51tkNoZ9v
-        N7sPHzcX63RpgIPvy27yPfAMJ5L95l1+e7GbBobvA/SNq9AquuoAj3DD/NLJ
-        1X5roH89zOU69UYXArE+iREcFgo8NlwwrHmkhUoXRC3Qww+eHYF4zrTwmFud
-        HFRzbKyhuIiBRWshGq/OBp48p/Gym+3V27auj00aPHdfHmGh7qqE8buza6vS
-        j+/79thNRUYM5TYd6n75H7KXwXsdVWIuBJmALC5CjJipIoKxUBAmXsieE0kt
-        fSH7c/FX9jkchsV2plvMeM/jR1ndDePivPa32/BKvDlbwiCtLETsnZWpVwls
-        pAqYx0i1Lqyn3D/dBi3TagEYrJnyWFhJsBWFx8pJ5wolFKfh324DVZZxrY0w
-        93c/ARo+DoULBAAA
+        H4sIAAAAAAAAAG1TYW+bMBD9KxWf48oY2xC+pU2UIi1RlGTdh2majH00qMQg
+        MG3ZtP/eg4Y0qSYBEvfe3Tu/O//86+lDXpgarBfbtigmXqXwx+27CrzY+1Na
+        8CYeBnLX7XQ5BBfr/WK72Sa7BUKFatz3yigH5q5D0DCjA6Ulob7ihIdCkEhG
+        kgBNIcwCmdEouk6b48eLfUFDxiiLJKV04ukalMtL+wVkA6gMNtw0qObTW3yY
+        ELeMcSxrwR1V84zIEBtfTntMHfvuZz92v+eLR+qT9W55M9MaK93s2hRTkWQ6
+        pOU6qV7kbFRxdQsT7wk7eVXdtWjQixpodJ1XfbujiUeVWwdWWQ2r0vSy82Q3
+        u/u2mCO/LlsH87xxuX1q8+YANeJSiIDHLJQsGil7VT9hU2fM96cCsRebmMES
+        XzAmJ15rDdSF6hZWpQUg5CXrh8U22Q9iI+rFmSoaOM/SDcZ+dNtURe5OFnzS
+        dN2dznRVsHy1Q8ORwlkCo0RxkxIehRFRJuJkqrX0QyG1Ef3qJHPkcqMiGmQh
+        0dQwwlNISUoZkID7oMIQgjDMvHH1hoxQKi34VBER8YDwzE+J0lNKUuZnmQSj
+        meqthzcHtVVFn/NxlmRzMbkxdNrmZPPYJ/WU5TjNkwNQv+Qa+jKSM38asZCf
+        R76a3Z8relTGGY25iYMslllMJRbczPb/N78qi1x3S5xm1Zf2hR8GQoQ+Q6hN
+        ETvb7eBYFSj3eRDVNKXO+wuyO6AvZg3utayft9CUba0viPOH+80WcMT9TNvm
+        etequnzrZtvNWejYFi7XePu+tPoptxoZ9wdlLRQrVV2IbZKvC9bAsihTVaBN
+        l9r/fr0D6qgb510EAAA=
     http_version: 
   recorded_at: Mon, 23 Oct 2017 11:31:50 GMT
 recorded_with: VCR 3.0.3
